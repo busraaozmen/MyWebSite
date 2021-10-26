@@ -1,14 +1,34 @@
 ﻿body {
-    padding: 0px;
+    padding:  0px;
     margin: 0px;
-    background-color:#000;
-    color:darkred;
+    background-color: #e5e3e3;
+    color: #a30888;
 }
 
-.busraImage{
-    width:60px;
-    height:60px;
-    background-color:none;
+section{
+    margin-top:4%;
+    margin-bottom:4%;
+}
+
+.nameStyle{
+    font-size:50px;
+    font-weight:600;
+
+}
+.navbar {
+    border-bottom: 3px solid #a30888
+    !important;
+}
+
+.titleStyle {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.busraImage {
+    width: 50px;
+    height: 50px;
+    background-color: none;
 }
 
 .photoBusra {
@@ -18,17 +38,78 @@
 }
 
 
-.iconFooter{
-    color:red;
+.iconFooter {
+    color: #a30888 ;
     text-align: center !important;
-    font-size:32px;
+    font-size: 32px;
 }
 
 .form-control {
-    background-color: #000 !important;
-    color: #bd2130 !important;
-    border: 1px solid #bd2130 !important;
+    background-color: #e5e3e3 !important;
+    color: #a30888 !important;
+    border: 1px solid #b1007e !important;
+
 }
 .btnContact{
 
+}
+div.reference div {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+}
+
+div.refImg {
+    width: 10%;
+    min-width: 6em;
+    width: 60px;
+    height: 60px;
+    background-color: none;
+}
+div.refInfo {
+    width: auto;
+    max-width: 75%;
+}
+
+p.refName {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: salmon;
+    text-decoration: underline;
+}
+
+p.refTitle {
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+p.desc {
+    opacity: 0.8;
+}
+
+
+.refLogo {
+    width: 60px;
+    height: 60px;
+    background-color: none;
+}
+
+.btnMailGonder {
+    padding: 5px 25px;
+    text-align: center;
+    color: #a30888 !important;
+    border: 1px solid #a30888 !important;
+}
+
+.modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    color: #000 !important;
+    background-color: #a70010 !important;
+    background-clip: padding-box;
+    border: 1px solid rgb(0 0 0);
 }

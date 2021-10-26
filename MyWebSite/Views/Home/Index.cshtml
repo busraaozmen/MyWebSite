@@ -10,32 +10,38 @@
     @*AboutMe*@
     <section id="abautMe" class="about" style="margin-top:80px;">
         <div class="container">
-
+            <div class="">
+                <center>
+                    <p class="nameStyle">
+                        BÜŞRA ÖZMEN
+                    </p>
+                    <p class="titleStyle">
+                        SOFTWARE DEVELOPER
+                    </p>
+                </center>
+            </div>
             <div class="row content">
-                <div class="col-lg-6 ">
+                <div class="col-lg-3 ">
 
                     <img src="~/image/busraOzmen.JPG" class="photoBusra" />
 
                 </div>
-                <div class="col-lg-6 pt-4 pt-lg-0">
-                    <div class="section-title ">
-                        <h2>Büşra Özmen Kimdir?</h2>
-                    </div>
+                <div class="col-lg-9 pt-4 pt-lg-0">
                     <p>
                         Başkent Üniversitesi Elektrik Elektronik Mühendisliği bölümünden mezun oldum. Yazılımdan  keyif aldığım için Developer olmam gerektiğine karar verdim ve Bilge Adam Bilişim Grubu ve Çalışma Bakanlığı’nın ortaklaşa düzenlemiş olduğu 100% burslu Nitelikli Bilişim Uzmanı Yetiştirme Programına katıldım. Bu program kapsamında Web ve Mobil Programlama öğrendim.
-
+                    </p>
+                    <p>
                         HARUSS YAZILIM Şirketinde Junior Developer 5 ay olarak çalıştım . Kariyerime AGARTHA TEKNOLOJİ BİLİŞİM YAZILIM MÜHENDİSLİK PAZARLAMA VE TİC.LTD.ŞTİ.  'de Frontend Developer olarak görev aldım.
-
+                    </p>
+                    <p>
                         Takım arkadaşlarımı ekip liderimle iletişimiz sayesinde alt yapısı sağlam .Net Core teknolojisi ile çeşitli web tabanlı uygulamalar geliştirdim. Çalıştığım projeler Bakanlıklara ve Büyükşehir Belediyelerine yönelik oldu. Çok şanlıyım ki çalıştığım firmalarda harika dostluklar ve bilgi edindim.
                         Eğitim geçmişime ve kişisel özelliklerime uygun, şirketinize değer katabileceğim bir pozisyonda çalışmak isterim.
-
-                        Saygılarımla, Büşra ÖZMEN
-
+                        <em>
+                            Saygılarımla, Büşra ÖZMEN
+                        </em>
                     </p>
-
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -66,6 +72,17 @@
 
             </div>
 
+
+            <div class="reference">
+                <div class="refImg">
+                    <img src="~/image/LogoBusra.png" style="height:70px;" />
+                </div>
+                <div class="refInfo">
+                    <p class="refName">Erhan KAYAALP</a></p>
+                    <p class="refTitle">Yazılım Takım lideri / Agartha Teknoloji</p>
+                    <p class="desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -101,7 +118,7 @@
                             <textarea class="form-control" name="mesaj" id="mesaj" rows="5" placeholder="Mesaj" required></textarea>
                         </div>
                     </form>
-                    <button id="btnMailGonder" type="button" class="btnContact btnMailGonder mb-5  text-center" data-toggle="modal" data-target="#modalID">
+                    <button id="btnMailGonder" type="button" class="btnContact btnMailGonder " data-toggle="modal" data-target="#modalID">
                         Gönder
                     </button>
                 </div>
@@ -109,19 +126,11 @@
 
 
             <div class="row ">
-                <div class="col-md-4">
-                 
-                </div>
-                <div class="col-md-4">
-                    <div class="mt-4">
+                    <div class="mt-4" style="margin:0px auto;">
                         <a href="#"><i class="fab fa-instagram iconFooter"></i></a>
                         <a href="#"><i class="fab fa-github iconFooter"></i></a>
                         <a href="#"><i class="fab fa-linkedin iconFooter"></i></a>
                     </div>
-                </div>
-                <div class="col-md-4">
-                  
-                </div>
             </div>
         </div>
 
@@ -137,7 +146,7 @@
             <div class="modal-header">
 
                 <div>
-                    <img class="imgPopopCss" src="~/img/AGARTA_LOGO_300.JPG" />
+                    <img class="busraImage" src="~/image/LogoBusra.png" />
                 </div>
                 <h1 id="exampleModalLabel " class=" logoPopCss modal-title">
                     <a>
@@ -161,5 +170,58 @@
     </div>
 </div>
 
+
+<script>
+    $(document).ready(function () {
+
+
+        $('#btnMailGonder').click(function () {
+            MailGonder();
+        });
+
+        $('#btnMailGonder').click(function () {
+            $("#modalID").modal("show");
+            $(".modal-backdrop.fade.show").removeClass("modal-backdrop fade show");
+        });
+
+        $(".modal-backdrop.fade.show").click(function () {
+            alert("Mesajınız Başarılı Bir Şekilde Gönderildi.")
+        });
+
+
+    })
+
+
+    function MailGonder() {
+        var Mail = {};
+        Mail["isim"] = $("#isim").val();
+        Mail["soyisim"] = $("#soyisim").val();
+        Mail["konu"] = $("#konu").val();
+        Mail["mesaj"] = $("#mesaj").val();
+        Mail["email"] = $("#email").val();
+
+        var _data = JSON.stringify(Mail);
+        $.ajax({
+
+            type: "POST",
+            url: "/Home/MailGonder",
+            data: _data,
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            success: function (result) {
+
+                if (result != null && result) {
+
+                    $("#isim").val("");
+                    $("#soyisim").val("");
+                    $("#konu").val("");
+                    $("#mesaj").val("");
+                    $("#email").val("");
+
+                }
+            },
+        });
+    }
+</script>
 
 

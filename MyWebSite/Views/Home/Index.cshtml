@@ -1,13 +1,165 @@
-﻿
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelper
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<body>
+
+
+
+    @*AboutMe*@
+    <section id="abautMe" class="about" style="margin-top:80px;">
+        <div class="container">
+
+            <div class="row content">
+                <div class="col-lg-6 ">
+
+                    <img src="~/image/busraOzmen.JPG" class="photoBusra" />
+
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <div class="section-title ">
+                        <h2>Büşra Özmen Kimdir?</h2>
+                    </div>
+                    <p>
+                        Başkent Üniversitesi Elektrik Elektronik Mühendisliği bölümünden mezun oldum. Yazılımdan  keyif aldığım için Developer olmam gerektiğine karar verdim ve Bilge Adam Bilişim Grubu ve Çalışma Bakanlığı’nın ortaklaşa düzenlemiş olduğu 100% burslu Nitelikli Bilişim Uzmanı Yetiştirme Programına katıldım. Bu program kapsamında Web ve Mobil Programlama öğrendim.
+
+                        HARUSS YAZILIM Şirketinde Junior Developer 5 ay olarak çalıştım . Kariyerime AGARTHA TEKNOLOJİ BİLİŞİM YAZILIM MÜHENDİSLİK PAZARLAMA VE TİC.LTD.ŞTİ.  'de Frontend Developer olarak görev aldım.
+
+                        Takım arkadaşlarımı ekip liderimle iletişimiz sayesinde alt yapısı sağlam .Net Core teknolojisi ile çeşitli web tabanlı uygulamalar geliştirdim. Çalıştığım projeler Bakanlıklara ve Büyükşehir Belediyelerine yönelik oldu. Çok şanlıyım ki çalıştığım firmalarda harika dostluklar ve bilgi edindim.
+                        Eğitim geçmişime ve kişisel özelliklerime uygun, şirketinize değer katabileceğim bir pozisyonda çalışmak isterim.
+
+                        Saygılarımla, Büşra ÖZMEN
+
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 
 
 
+    @*Projects*@
 
+    <section id="projects">
+
+
+        <div class="section-title">
+
+
+        </div>
+
+
+
+    </section>
+
+    @*References*@
+
+    <section id="references" class="services mb-5">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2 class="">Referanslar</h2>
+
+            </div>
+
+        </div>
+    </section>
+
+    @*iletişim*@
+    <section id="contact" class="contact section-bg container-fluid d-block">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <div class="section-title">
+                    <h2 class="kucukBaslik mt-5 ">İletişim</h2>
+
+                </div>
+            </div>
+
+
+            <div class="row ">
+                <div class="col-lg-12">
+                    <form id="iletisimID">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input id="isim" type="text" name="name" class="form-control" asp-for="name" placeholder="İsim" required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="email" class="form-control" name="soyisim" id="soyisim" placeholder="Soyisim" required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" name="konu" id="konu" placeholder="Konu" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" name="email" id="email" placeholder="E Posta" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="mesaj" id="mesaj" rows="5" placeholder="Mesaj" required></textarea>
+                        </div>
+                    </form>
+                    <button id="btnMailGonder" type="button" class="btnContact btnMailGonder mb-5  text-center" data-toggle="modal" data-target="#modalID">
+                        Gönder
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="row ">
+                <div class="col-md-4">
+                 
+                </div>
+                <div class="col-md-4">
+                    <div class="mt-4">
+                        <a href="#"><i class="fab fa-instagram iconFooter"></i></a>
+                        <a href="#"><i class="fab fa-github iconFooter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin iconFooter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                  
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+
+
+<div class="modal fade" id="modalID" tabindex="1000" aria-hidden="true" role="dialog" style="z-index:2050; margin-top:200px !important; ">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <div>
+                    <img class="imgPopopCss" src="~/img/AGARTA_LOGO_300.JPG" />
+                </div>
+                <h1 id="exampleModalLabel " class=" logoPopCss modal-title">
+                    <a>
+                        BÜŞRA ÖZMEN
+                    </a>
+                </h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <em>
+                    Mesajınız gönderildi. Teşekkür ederim.
+                </em>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="popButton " data-dismiss="modal">Kapat</button>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
 

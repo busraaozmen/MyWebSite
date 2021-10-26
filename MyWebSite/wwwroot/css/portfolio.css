@@ -1,11 +1,34 @@
 ﻿body {
-    padding:0px;
-    margin:0px;
-    background:white;
+    padding: 0px;
+    margin: 0px;
+    background-color:#000;
+    color:darkred;
 }
 
 .busraImage{
     width:60px;
     height:60px;
     background-color:none;
+}
+
+.photoBusra {
+    width: auto !important;
+    height: 350px !important;
+    margin: 0px auto;
+}
+
+
+.iconFooter{
+    color:red;
+    text-align: center !important;
+    font-size:32px;
+}
+
+.form-control {
+    background-color: #000 !important;
+    color: #bd2130 !important;
+    border: 1px solid #bd2130 !important;
+}
+.btnContact{
+
 }

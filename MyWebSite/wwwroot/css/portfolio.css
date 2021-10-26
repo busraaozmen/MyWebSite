@@ -1,8 +1,9 @@
 ﻿body {
-    padding:  0px;
+    padding: 0px;
     margin: 0px;
     background-color: #e5e3e3;
     color: #a30888;
+    font-family: cursive !important;
 }
 
 section{
@@ -19,6 +20,20 @@ section{
     border-bottom: 3px solid #a30888
     !important;
 }
+
+.nav-link {
+    color: #a30888 !important;
+    text-decoration: none;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+    .nav-link:hover {
+        color: #cd00a9 !important;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
 
 .titleStyle {
     font-size: 32px;
@@ -74,8 +89,6 @@ div.refInfo {
 p.refName {
     font-size: 1.2em;
     font-weight: bold;
-    color: salmon;
-    text-decoration: underline;
 }
 
 p.refTitle {
@@ -112,4 +125,9 @@ p.desc {
     background-color: #a70010 !important;
     background-clip: padding-box;
     border: 1px solid rgb(0 0 0);
+}
+
+.reference{
+    margin-top:2%;
+    margin-bottom:2%;
 }

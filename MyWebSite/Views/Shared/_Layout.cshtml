@@ -3,11 +3,58 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <title>Büşra ÖZMEN</title>
+    <meta charset="utf-8">
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="~/css/portfolio.css" rel="stylesheet" />
+
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/popper/umd/popper.js"></script>
+    <script src="~/lib/twitter-bootstrap/js/bootstrap.js"></script>
+    <script src="~/lib/jquery-inputmask/inputmask.js"></script>
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+    <script src="~/lib/font-awesome/js/all.js"></script>
+    <script src="~/lib/font-awesome/js/fontawesome.js"></script>
+
 </head>
 <body>
-    <div>
-        @RenderBody()
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg  fixed-top navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img class="busraImage" src="~/image/busraOzmen.JPG" />
+
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav ml-auto my-2 navbar-nav-scroll">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="">HAKKIMDA<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/#projects">PROJELER<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/#references">REFERANSLAR<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/#contact">İLETİŞİM<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            @RenderBody()
+        </div>
+
     </div>
+
+
 </body>
 </html>

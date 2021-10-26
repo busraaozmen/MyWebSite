@@ -1,0 +1,11 @@
+﻿body {
+    padding:0px;
+    margin:0px;
+    background:white;
+}
+
+.busraImage{
+    width:60px;
+    height:60px;
+    background-color:none;
+}

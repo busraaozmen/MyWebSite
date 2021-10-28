@@ -19,42 +19,46 @@
     <script src="~/lib/jquery-validate/jquery.validate.js"></script>
     <script src="~/lib/font-awesome/js/all.js"></script>
     <script src="~/lib/font-awesome/js/fontawesome.js"></script>
+    <script src="~/js/.js"></script>
 
 </head>
 <body>
 
-    <header style=" margin-bottom:150px;">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg  fixed-top ">
-                <a class="navbar-brand" href="#">
-                    <img class="busraImage rounded-circle" src="~/image/busraLogo.png" />
 
-                </a>
-                <p class="nameStyle">
-                    BÜŞRA ÖZMEN
-                </p>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <ul class="navbar-nav ml-auto my-2 navbar-nav-scroll">
-                        <li class="nav-item ">
-                            <a class="nav-link " href="/#abautMe">HAKKIMDA<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link " href="/#projects">PROJELER<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link " href="/#references">REFERANSLAR<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="/#contact">İLETİŞİM<span class="sr-only">(current)</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg  fixed-top ">
+            <a class="navbar-brand" href="/Home/Index">
+                <img class="busraImage rounded-circle" src="~/image/busraLogo.png" />
+            </a>
+            <span class="nameStyle">
+                BÜŞRA ÖZMEN
+            </span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav ml-auto my-2 navbar-nav-scroll">
+                    <li class="nav-item ">
+                        <a class="nav-link " href="/#abautMe">HAKKIMDA<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="/#projects">PROJELER<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/#skils">YETENEKLER<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="/#references">REFERANSLAR<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/#contact">İLETİŞİM<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
     <div>
         @RenderBody()
     </div>
